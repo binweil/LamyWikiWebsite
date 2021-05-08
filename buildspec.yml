@@ -1,0 +1,27 @@
+version: 0.2
+
+env:
+  variables:
+    CI: "true"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12.x
+    commands:
+      - apt-get update
+
+  pre_build:
+    commands:
+      - npm install
+
+  build:
+    commands:
+      - npm run release
+
+aritifacts:
+  base-directory: packages
+  files:
+    - "infrastructure/build/**/*"
+    - "infrastructure/lib/lambda/*"
+    - "website/build/**/*"

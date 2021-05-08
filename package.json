@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "lerna": "3.13.1",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "bootstrap": "npm install && lerna bootstrap",
+    "bootstrap:ci": "npm ci && lerna bootstrap --ci",
+    "update": "npm update && lerna exec --parallel --no-sort -- npm update",
+    "build": "lerna run prepare && lerna run install && lerna run build",
+    "test": "lerna run --parallel --no-sort test",
+    "release": "npm run bootstrap && npm run build && npm run test"
+  },
+  "version": "0.0.1",
+  "name": "LamyWikiWebsite",
+  "dependencies": {}
+}

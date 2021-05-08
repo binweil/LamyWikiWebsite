@@ -1,0 +1,11 @@
+*.js
+*.d.ts
+*.jsii
+dist
+build
+node_modules
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+# Intellij
+.idea

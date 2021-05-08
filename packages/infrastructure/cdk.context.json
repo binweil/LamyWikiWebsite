@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=057559841507:domainName=wiki-docs.com:region=us-east-1": {
+    "Id": "/hostedzone/Z16TAWNGD711T3",
+    "Name": "wiki-docs.com."
+  },
+  "hosted-zone:account=057559841507:domainName=wiki-docs.com:region=us-west-2": {
+    "Id": "/hostedzone/Z16TAWNGD711T3",
+    "Name": "wiki-docs.com."
+  }
+}
