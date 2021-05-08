@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import * as cdk from '@aws-cdk/core';
 import { LamyWikiWebsiteStack } from "../lib/LamyWikiWebsiteStack";
-import {BuildStack} from "../lib/build-stack";
 
 const app = new cdk.App();
 const stackConfig = {
