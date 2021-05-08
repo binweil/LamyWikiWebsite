@@ -7,11 +7,12 @@ import * as route53 from '@aws-cdk/aws-route53';
 import * as acm from '@aws-cdk/aws-certificatemanager';
 import * as targets from '@aws-cdk/aws-route53-targets/lib';
 
-import {RemovalPolicy} from '@aws-cdk/core';
+import {RemovalPolicy, StackProps} from '@aws-cdk/core';
 import {CfnDistribution, OriginAccessIdentity} from "@aws-cdk/aws-cloudfront";
+import {Construct} from "constructs";
 
-export class MiniTwitterFrontEndStack extends cdk.Stack {
-  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+export class FrontendStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
     const domain = 'wiki-docs.com';

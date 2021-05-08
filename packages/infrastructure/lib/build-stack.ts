@@ -22,7 +22,7 @@ export class BuildStack extends Stack {
         }
 
         const sourceCodeRepo = new Repository(this, 'LamyWikiRepo', {
-            repositoryName: "LamyWiki"
+            repositoryName: "LamyWikiWebsite"
         });
 
         const pipeline = new Pipeline(this, 'Pipeline');

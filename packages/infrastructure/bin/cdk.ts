@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import * as cdk from '@aws-cdk/core';
-import { MiniTwitterFrontEndStack } from '../lib/frontend-stack';
-import {MiniTwitterBackEndStack} from "../lib/backend-stack";
+import { LamyWikiWebsiteStack } from "../lib/LamyWikiWebsiteStack";
 import {BuildStack} from "../lib/build-stack";
 
 const app = new cdk.App();
@@ -13,8 +12,5 @@ const stackConfig = {
     terminationProtection: false
 };
 
-new BuildStack(app, 'BuildStack', stackConfig);
-
-new MiniTwitterBackEndStack(app, 'BackEndStack', stackConfig);
-new MiniTwitterFrontEndStack(app, 'FrontEndStack', stackConfig);
+new LamyWikiWebsiteStack(app, "LamyWikiWebsiteStack", stackConfig);
 app.synth();
